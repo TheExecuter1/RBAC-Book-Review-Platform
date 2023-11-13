@@ -29,7 +29,7 @@
 ## Database Migrations
 
 ### Setting Up Migrations
-If you haven't already set up migrations, you'll need to initialize a migration directory:
+Initialize a migration directory:
 
 ```bash
 flask db init
@@ -41,8 +41,6 @@ Open the migrations folder and go to alembic.ini
 Below the [alembic] put this line 'sqlalchemy.url = postgresql://username:password@localhost/dbname'
 
 ### Running Migrations
-
-If you have existing migration scripts:
 
 1. If you make changes to your database models, generate new migration scripts:
    ```bash
@@ -56,7 +54,7 @@ If you have existing migration scripts:
 
 ## Environment Variables
 
-Your application uses environment variables for configuration. To set these up:
+To set these up:
 
 1. Create a `.env` file in the root directory of the project.
 2. Add the following environment variables to the `.env` file:
@@ -67,9 +65,9 @@ Your application uses environment variables for configuration. To set these up:
 3. Replace `your_secret_key_here` and `your_jwt_secret_key_here` with your own secret keys.
 
 ### Generating Secret Keys
-For security, it's important to generate your own secret keys. Here's how you can generate a secret key in Python:
+You can generate a secret key in Python:
 
-```python
+```
 import os
 print(os.urandom(16))
 ```
