@@ -1,8 +1,5 @@
 
-# My Flask App
-
-## Description
-[Provide a brief description of what your app does.]
+#Book Review Platform 
 
 ## Requirements
 - Python 3.x
