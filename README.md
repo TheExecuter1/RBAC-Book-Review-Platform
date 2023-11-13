@@ -57,6 +57,28 @@ If you have existing migration scripts:
    flask db upgrade
    ```
 
+## Environment Variables
+
+Your application uses environment variables for configuration. To set these up:
+
+1. Create a `.env` file in the root directory of the project.
+2. Add the following environment variables to the `.env` file:
+   ```
+   SECRET_KEY=your_secret_key_here
+   JWT_SECRET_KEY=your_jwt_secret_key_here
+   ```
+3. Replace `your_secret_key_here` and `your_jwt_secret_key_here` with your own secret keys.
+
+### Generating Secret Keys
+For security, it's important to generate your own secret keys. Here's how you can generate a secret key in Python:
+
+```python
+import os
+print(os.urandom(16))
+```
+
+Run this script in a Python environment to generate a secure secret key.
+
 ### Running the App
 1. Run the Flask application: `flask run.py`
 3. Access the app in your web browser at `http://127.0.0.1:5000/`
